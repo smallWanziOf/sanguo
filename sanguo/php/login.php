@@ -5,9 +5,9 @@
 $name=$_REQUEST['userName'];
 $pwd=$_REQUEST['userPwd'];
 
-$conn = mysqli_connect('127.0.0.1','root','','qhgame', 3306);
+$conn = mysqli_connect('127.0.0.1','root','','sanguo', 3306);
 mysqli_query($conn, 'SET NAMES UTF8');
-$sql = "SELECT user_id FROM qhgame_login WHERE user_name='$name' AND user_pwd='$pwd'";
+$sql = "SELECT user_id FROM sanguo_login WHERE user_name='$name' AND user_pwd='$pwd'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 if($row){

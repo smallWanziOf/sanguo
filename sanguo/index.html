@@ -15,7 +15,7 @@
 </head>
 <body>
 	<input type="password" id="user_name" style="display:none;"/>
-    <div class="main-container">
+    <div class="main-container" id="main_container">
 		<div class="form-group-login login-regist" id="login_page">
 			<!-- 登录页面 -->
 			<form class="form-group">
@@ -28,6 +28,7 @@
 					<p>密码：</p>
 					<input type="password" id="input_pwd" placeholder="请输入密码">
 				</div>
+				<div class="notice_login"></div>
 				<div class="btn-group">
 					<span class="click_regist">注册</span>
 					<span class="click_login">登录</span>
@@ -58,7 +59,16 @@
 				</div>
 			</form>
 		</div>
+		<div class="notice_panel">
+			<div class="notice_container">
+				<h2>公告</h2>
+			</div>
+		</div>
     </div>
 </body>
 <script src="js/index.js"></script>
+<script>
+	var height=window.screen.height;
+	$("body").css("height",height+"px")
+</script>
 </html>

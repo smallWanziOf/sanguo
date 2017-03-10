@@ -81,20 +81,21 @@ $(".click_login_sure").on("click",function(){
 
 /*点击登录*/
 //login
-$("#bg_login").click(function(){
-    var userMessage={"userName":$("#inputName").val(),"userPwd":$("#inputPassword").val()}
+$(".click_login").click(function(){
+    var userMessage={"userName":$("#input_user").val(),"userPwd":$("#input_pwd").val()}
     $.ajax({
         type:"POST",
         data:userMessage,
-        url:"login.php",
+        url:"./php/login.php",
         success:function(e){
             if(e=="success"){
               $("#user_name").val(userMessage["userName"]);
-              $("#login_tip").html("<h3>登录成功！页面正在跳转中...</h3>");
-              $("#main_Container").load(dev_location+"mainApp/selectRole.html");
+              $(".form-group-login").css("display","none");
+              $(".notice_panel").css("display","block");
+              //$("#main_container").load(dev_location+"mainApp/selectRole.html");
               //window.location.href=dev_location+"mainApp/selectRole.html?UFO"+Math.ceil(Math.random()*520)+"_"+decToHex($("#inputName").val());
             }else{
-              $("#login_tip").html("<div class='alert alert-danger' role='alert'>用户名或密码错误！</div>");
+              $(".notice_login").html("用户名或密码错误");
             }
         },
         error:function(error){
