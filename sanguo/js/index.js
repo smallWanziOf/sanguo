@@ -12,7 +12,7 @@ $(".click_regist_return").on("click",function(){
 //regist
 //注册账号
 $("#input_user_regist").on("change",function(){
-    var reg=/^[0-9a-zA-Z\u4e00-\u9fa5]{0,8}$/;
+    var reg=/^[0-9a-zA-Z\u4e00-\u9fa5]{0,6}$/;
     if(!reg.test($(this).val())){
         $(this).val('');
         $(".notice_message").html("账号格式错误");
@@ -43,7 +43,6 @@ $("#input_pwd_regist_repeat").on("change",function(){
 })
 //确定注册
 $(".click_login_sure").on("click",function(){
-	debugger;
 	if($(".notice_message").html()!="") return
     var acount=$.trim($("#input_user_regist").val());
     var pwd=$.trim($("#input_pwd_regist").val());
@@ -103,3 +102,151 @@ $(".click_login").click(function(){
         }
     })
 })
+
+/*点击显示加载页面*/
+$(".notice_btn").on("click",function(){
+  $(".notice_panel").css("display","none");
+  $(".load_progress").css("display","block");
+  reploadImg()
+})
+
+var selectRole1,
+    selectRole2,
+    selectRole3,
+    selectRole4,
+    selectRole5,
+    selectRole6,
+    selectRole7,
+    selectRole8,
+    selectRole9,
+    selectRole10,
+    selectRoleBg;
+/*预加载所有的资源包*/
+function reploadImg(){
+  var progress=0;
+  var intogameImg = new Image();
+  intogameImg.src = "./images/selectRole/intogame.jpg";
+  function drawProgress(){
+    $("#inProgress").css("width",progress+"%");
+    if(progress==100){
+      $(".progressTip").html("<img src="+intogameImg.src+">");
+      $(".progressTip img").on("click",function(){
+        $("#main_container").load("html/selectRole.html");
+        selectRolePage()
+      })
+    }
+  }
+
+  selectRole1 = new Image();
+  selectRole1.src = "./images/selectRole/1.JPG";
+  selectRole1.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole2 = new Image();
+  selectRole2.src = "./images/selectRole/2.JPG";
+  selectRole2.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole3 = new Image();
+  selectRole3.src = "./images/selectRole/3.JPG";
+  selectRole3.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+  selectRole4 = new Image();
+  selectRole4.src = "./images/selectRole/4.JPG";
+  selectRole4.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole5 = new Image();
+  selectRole5.src = "./images/selectRole/5.JPG";
+  selectRole5.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole6 = new Image();
+  selectRole6.src = "./images/selectRole/6.JPG";
+  selectRole6.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole7 = new Image();
+  selectRole7.src = "./images/selectRole/7.JPG";
+  selectRole7.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRole8 = new Image();
+  selectRole8.src = "./images/selectRole/8.JPG";
+  selectRole8.onload=function(){
+    progress+=10;
+    drawProgress()
+  }
+
+  selectRoleBg = new Image();
+  selectRoleBg.src = "./images/selectRole/select_bg.jpg";
+  selectRoleBg.onload=function(){
+    progress+=20;
+    drawProgress()
+  }
+  
+}
+
+function selectRolePage(){
+  $("body").css("background","url("+selectRoleBg.src+") no-repeat");
+  $("body").css("background-size","100% 100%");
+  setTimeout(function(){
+    $("#swiper-container3 .swiper-wrapper").html(
+    "<div class='swiper-slide' id='1'><img src='"+selectRole1.src+"' /></div>"+
+    "<div class='swiper-slide' id='5'><img src='"+selectRole5.src+"' /></div>"+
+    "<div class='swiper-slide' id='2'><img src='"+selectRole2.src+"' /></div>"+
+    "<div class='swiper-slide' id='6'><img src='"+selectRole6.src+"' /></div>"+
+    "<div class='swiper-slide' id='3'><img src='"+selectRole3.src+"' /></div>"+
+    "<div class='swiper-slide' id='7'><img src='"+selectRole7.src+"' /></div>"+
+    "<div class='swiper-slide' id='4'><img src='"+selectRole4.src+"' /></div>"+
+    "<div class='swiper-slide' id='8'><img src='"+selectRole8.src+"' /></div>"
+    );
+    var mySwiper = new Swiper('.swiper-container',{
+      effect : 'coverflow',
+      slidesPerView: 3,
+      centeredSlides: true,
+    });
+    $("#sure_btn").html("<div class='sure_and_into'>确认选择主角卡</div>");
+    $(".sure_and_into").on("click",function(){
+      var mainRole = {"mainRole":$(".swiper-slide-active")[0].id,"uName":$("#user_name").val()};
+      $.ajax({
+        type:"POST",
+        data:mainRole,
+        url:"./php/selectMainRole.php",
+        success:function(e){
+          if(e=="success"){
+            $("#main_container").load("html/neiZhen.html",function(){
+              $(".load_progress").css("display","block");
+            });
+          }else{
+            alert("登录错误！请关闭重新连接")
+          }
+        },
+        error:function(error){
+            alert("登录错误！请关闭重新连接")
+        }
+      });
+    })
+  },500)
+}
+
+document.addEventListener("touchmove",function(e){
+if(true){
+e.preventDefault();
+e.stopPropagation();
+}
+},false);

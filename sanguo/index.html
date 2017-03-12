@@ -15,6 +15,7 @@
 </head>
 <body>
 	<input type="password" id="user_name" style="display:none;"/>
+	<input type="password" id="user_mainRole" style="display:none;"/>
     <div class="main-container" id="main_container">
 		<div class="form-group-login login-regist" id="login_page">
 			<!-- 登录页面 -->
@@ -39,10 +40,9 @@
 			<!-- 注册页面 -->
 			<form class="form-group">
 				<div class="logoImg"><img src="images/logo.png" alt=""></div>
-				<div class="wel_regist">*欢迎注册三国吧游戏</div>
 				<div class="input_user">
 					<p>账号：</p>
-					<input type="text" id="input_user_regist" placeholder="8位随机的汉字或字母或数字" />
+					<input type="text" id="input_user_regist" placeholder="1-6位的汉字或字母或数字" />
 				</div>
 				<div class="input_pwd">
 					<p>密码：</p>
@@ -62,7 +62,22 @@
 		<div class="notice_panel">
 			<div class="notice_container">
 				<h2>公告</h2>
+				<ul>
+					<li>官方QQ群：630804314</li>
+					<li>一 、签到</li>
+					<li>这是一个登录页面</li>
+					<li>我们开始注册吧</li>
+					<li>好像不是很好的选择</li>
+					<li>二、首充</li>
+					<li>官方QQ群：630804314</li>
+					<li>官方QQ群：630804314</li>
+				</ul>
 			</div>
+			<div class="notice_btn">我知道了</div>
+		</div>
+		<div class="load_progress">
+			<div class="progressTip">数据加载中,请稍后...</div>
+			<div id="inProgress"></div>
 		</div>
     </div>
 </body>

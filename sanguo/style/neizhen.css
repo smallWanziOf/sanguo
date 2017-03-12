@@ -1,0 +1,190 @@
+.progressTip{
+	color:#fff;
+}
+.NZ-header-logo{
+	position:absolute;
+	top:0;
+	left:0;
+	width:25%;
+	height:100px;
+	background: url("../images/other/logo.png") no-repeat;
+	background-size:100% 100%; 
+	text-align: center;
+}
+.NZ-header-logo>img{
+	width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    position: relative;
+    top: 6px;
+    left: -2px;
+}
+.NZ-header-logo>div{
+	color:#fff;
+	font-size: 12px;
+}
+.NZ-header-tili{
+	position:absolute;
+	top:5px;
+	left:25%;
+	width:23%;
+	height:20px;
+	background: url("../images/other/tili.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-header-tili>div,.NZ-header-yuanbao>div,.NZ-header-jinbi>div{
+	color: #fff;
+    text-align: right;
+    margin-right: 5px;
+}
+.NZ-header-vip>div{
+	color:yellow;
+	text-align: right;
+	margin-right: 8px;
+	font-weight:bold;
+}
+.NZ-header-zhanli>div{
+	color:yellow;
+	text-align: right;
+	margin-right: 8px;
+	font-weight: bold;
+	position:relative;
+	top:5px;
+}
+.NZ-header-yuanbao{
+	position:absolute;
+	top:5px;
+	left:50%;
+	width:23%;
+	height:20px;
+	background: url("../images/other/yuanbao.png") no-repeat;
+	background-size:100% 100%; 
+	border-radius: 6px;
+}
+.NZ-header-jinbi{
+	position:absolute;
+	top:5px;
+	left:75%;
+	width:23%;
+	height:20px;
+	background: url("../images/other/jinbi.png") no-repeat;
+	background-size:100% 105%;
+	border-radius: 6px;
+}
+.NZ-header-vip{
+	position:absolute;
+	top:40px;
+	left:25%;
+	width:15%;
+	height:20px;
+	background: url("../images/other/vip.png") no-repeat;
+	background-size:100% 100%;
+}
+.NZ-header-zhanli{
+	position:absolute;
+	top:34px;
+	left:50%;
+	width:40%;
+	height:25px;
+	background: url("../images/other/zhanli.png") no-repeat;
+	background-size:100% 100%;
+}
+.NZ-active{
+	position:absolute;
+	top:100px;
+	left:0;
+	width:100%;
+	min-height:50px;
+}
+ul{padding:0;margin:0;}
+.NZ-active>ul>li{
+	list-style: none;
+	float:left;
+	width:20%;
+	height:70px;
+}
+.NZ-active>ul>li.huodong{
+	background: url("../images/other/huodong.png") no-repeat;
+	background-size:95% 95%; 
+}
+.NZ-active>ul>li.jiangli{
+	background: url("../images/other/jiangli.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-active>ul>li.shuoming{
+	background: url("../images/other/shuoming.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-active>ul>li.tujian{
+	background: url("../images/other/tujian.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container{
+	position:absolute;
+	bottom:0px;
+	left:0;
+	width:100%;
+	height:70px;
+	background: url("../images/other/footerbg.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container>ul>li{
+	list-style: none;
+	float:left;
+	width:20%;
+	height:70px;
+	text-align: center;
+}
+.NZ-footer-container>ul>li.zhuye{
+	background: url("../images/other/zhuye.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container>ul>li.zhenrong{
+	background: url("../images/other/zhenrong.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container>ul>li.fuben{
+	background: url("../images/other/fuben.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container>ul>li.lilian{
+	background: url("../images/other/lilian.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-footer-container>ul>li.shangcheng{
+	background: url("../images/other/shangcheng.png") no-repeat;
+	background-size:100% 100%; 
+}
+.NZ-role-message{
+	position:absolute;
+	bottom:70px;
+	left:10px;
+	width:100%;
+	height:70px;
+}
+.NZ-role-message>ul>li{
+	list-style: none;
+	float:left;
+	width:20%;
+	height:70px;
+}
+.NZ-role-message>ul>li.wujiang{
+	background: url("../images/other/wujiang.png") no-repeat;
+	background-size:80% 100%; 
+}
+.NZ-role-message>ul>li.zhuangbei{
+	background: url("../images/other/zhuangbei.png") no-repeat;
+	background-size:80% 100%; 
+}
+.NZ-role-message>ul>li.baoshi{
+	background: url("../images/other/baoshi.png") no-repeat;
+	background-size:80% 100%; 
+}
+.NZ-role-message>ul>li.youxiang{
+	background: url("../images/other/youxiang.png") no-repeat;
+	background-size:80% 100%; 
+}
+.NZ-role-message>ul>li.gengduo{
+	background: url("../images/other/gengduo.png") no-repeat;
+	background-size:80% 100%; 
+}

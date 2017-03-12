@@ -19,17 +19,17 @@ body{
 	border-radius:10px;
 	background-color:#fff; 
 	margin:0 auto;
-	margin-top:20%;
+	margin-top:10%;
 }
 
 .main-container>.form-group-regist{
 	position:relative;
 	width:300px;
-	height:330px;
+	height:310px;
 	border-radius:10px;
 	background-color:#fff; 
 	margin:0 auto;
-	margin-top:20%;
+	margin-top:10%;
 }
 
 .main-container .form-group{
@@ -57,7 +57,7 @@ body{
 }
 .login-regist p{
 	position: absolute;
-	top:-10px;
+	top:-7px;
 	left:5px;
 }
 .btn-group{
@@ -105,7 +105,7 @@ body{
 	border-radius:10px;
 	background-color:#fff; 
 	margin:0 auto;
-	margin-top:20%;
+	margin-top:10%;
 	display: none;
 	background-image: url("../images/notice.jpg");
 	background-size:100% 100%; 
@@ -115,11 +115,81 @@ body{
 	width:250px;
 	margin:0 auto;
 	min-height:320px;
-	border:1px solid red;
 	position:relative;
 	top:30px;
 }
 .notice_container h2{
 	text-align: center;
 }
+.notice_btn{
+	text-align: center;
+	width:80px;
+	padding:5px;
+	background-color: gold;
+	margin:0 auto;
+	border:2px solid red;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.load_progress{
+	display: none;
+	width:90%;
+	margin-top:50vh;
+	margin-left: 5%;
+	margin-right: 5%;
+	height:20px;
+	border:1px solid red;
+	position:relative;
+}
 
+.load_progress>div{
+	position: absolute;
+	background-color: red;
+	bottom:0;
+	height:20px;
+	width:0;
+	transition: all ease .3s;
+}
+.load_progress>div.progressTip{
+	bottom:50px;
+	text-align: center;
+	width:100%;
+	background-color:transparent;
+}
+.load_progress>div.progressTip>img{
+	border-radius: 5px;
+}
+#swiper-container3{
+	margin-top: 10%;
+}
+#swiper-container3 .swiper-container{
+	padding:20px;
+	margin-left:-60px;
+}
+#swiper-container3 img{
+	width:200px;
+}
+#swiper-container3 .swiper-slide{
+	width:200px;
+}
+#swiper-container3 .swiper-slide-active{
+	width:200px;
+}
+.swiper-slide-active img{
+	border:1px solid red;
+	box-shadow:  0 0 20px gold;
+	transition: all linear .3s;
+}
+.swiper-wrapper{
+	width:200px;
+}
+.sure_and_into{
+	text-align: center;
+	height:39px;
+	line-height:39px;
+	width:130px;
+	background-image: url("../images/selectRole/btn.jpg");
+	border-radius:10px;  
+	margin:0 auto;
+	color:floralwhite;
+}
