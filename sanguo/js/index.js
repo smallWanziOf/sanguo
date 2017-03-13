@@ -229,7 +229,7 @@ function selectRolePage(){
         url:"./php/selectMainRole.php",
         success:function(e){
           if(e=="success"){
-            $("#main_container").load("html/neiZhen.html",function(){
+            $("#main_container").load("html/footer.html",function(){
               $(".load_progress").css("display","block");
             });
           }else{
@@ -243,10 +243,10 @@ function selectRolePage(){
     })
   },500)
 }
-
+var touch=true;
 document.addEventListener("touchmove",function(e){
-if(true){
-e.preventDefault();
-e.stopPropagation();
-}
+  if(touch){
+    e.preventDefault();
+    e.stopPropagation();
+  }
 },false);

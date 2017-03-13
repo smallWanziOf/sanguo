@@ -1,25 +1,4 @@
-preLoadImg();
-var neizhenbg;
-
-function preLoadImg(){
-	var progress=0;
-	function drawProgress(){
-		$("#inProgress").css("width",progress+"%");
-		if(progress==100){
-			$("body").css("background","url("+neizhenbg.src+") no-repeat");
-  			$("body").css("background-size","100% 100%");
-  			$(".load_progress").css("display","none");
-  			loadUserMessage();
-		}
-	}
-	neizhenbg=new Image();
-	neizhenbg.src="./images/other/neizhenbg.jpg";
-	neizhenbg.onload=function(){
-		progress=100;
-		drawProgress()
-	}
-}
-
+loadUserMessage();
 function loadUserMessage(){
 	var uName={"uName":$("#user_name").val()}
     $.ajax({
@@ -44,9 +23,4 @@ function loadUserMessage(){
         }
     });
 }
-clickImg();
-function clickImg(){
-	$(".fuben").on("click",function(){
-		$(".NZ_caontaine").load("html/fuBen.html")
-	})
-}
+

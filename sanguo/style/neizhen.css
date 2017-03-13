@@ -119,42 +119,6 @@ ul{padding:0;margin:0;}
 	background: url("../images/other/tujian.png") no-repeat;
 	background-size:100% 100%; 
 }
-.NZ-footer-container{
-	position:absolute;
-	bottom:0px;
-	left:0;
-	width:100%;
-	height:70px;
-	background: url("../images/other/footerbg.png") no-repeat;
-	background-size:100% 100%; 
-}
-.NZ-footer-container>ul>li{
-	list-style: none;
-	float:left;
-	width:20%;
-	height:70px;
-	text-align: center;
-}
-.NZ-footer-container>ul>li.zhuye{
-	background: url("../images/other/zhuye.png") no-repeat;
-	background-size:100% 100%; 
-}
-.NZ-footer-container>ul>li.zhenrong{
-	background: url("../images/other/zhenrong.png") no-repeat;
-	background-size:100% 100%; 
-}
-.NZ-footer-container>ul>li.fuben{
-	background: url("../images/other/fuben.png") no-repeat;
-	background-size:100% 100%; 
-}
-.NZ-footer-container>ul>li.lilian{
-	background: url("../images/other/lilian.png") no-repeat;
-	background-size:100% 100%; 
-}
-.NZ-footer-container>ul>li.shangcheng{
-	background: url("../images/other/shangcheng.png") no-repeat;
-	background-size:100% 100%; 
-}
 .NZ-role-message{
 	position:absolute;
 	bottom:70px;
